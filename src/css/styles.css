@@ -14,7 +14,39 @@ body {
 
 #search-box {
   font: inherit;
+  font-size: 16px;
   padding: 8px;
-  max-width: 320px;
+  width: 300px;
   margin-bottom: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+#search-box:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px #0077cc;
+  outline: none;
+}
+
+.country-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.country-list__item {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.country-list__image {
+  margin-right: 5px;
+}
+
+.country-list__text {
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #333;
 }
