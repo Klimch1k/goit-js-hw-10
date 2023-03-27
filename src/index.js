@@ -2,6 +2,7 @@ import './css/styles.css';
 import { fetchCountries } from './fetchCountries';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
+import { createMarkupListCountries } from './createMarkup'
 
 const DEBOUNCE_DELAY = 300;
 const inputSearchCountry = document.querySelector('#search-box');
@@ -25,6 +26,11 @@ function handleInputChange(evt) {
       Notiflix.Notify.info(
         'Too many matches found. Please enter a more specific name.'
       );
+    }
+
+    if (2 < data.length < 10) {
+      listCountries.innerHTML = createMarkupListCountries(data);
+      console.log(data[0].name.common)
     }
   });
     
