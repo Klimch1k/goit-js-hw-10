@@ -21,6 +21,8 @@ function handleInputChange(evt) {
   const inputValue = evt.target.value;
 
   if (inputValue.trim() === '') {
+    countryInfoBox.innerHTML = '';
+    listCountries.innerHTML = '';
     return;
   }
   fetchCountries(inputValue)
